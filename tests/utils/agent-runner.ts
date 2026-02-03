@@ -108,6 +108,8 @@ export async function run(config: TestConfig): Promise<AgentMetadata> {
     {
       cliArgs.push('--log-dir');
       cliArgs.push(buildLogFilePath());
+      cliArgs.push('--share');
+      cliArgs.push(buildShareFilePath());
     }
     
     client = new CopilotClient({
